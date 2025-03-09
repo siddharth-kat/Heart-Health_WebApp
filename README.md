@@ -1,41 +1,100 @@
-===> Check Master Branch <===
+# Heart Health App
 
-This project was bootstrapped with Create React App.
+Heart Health is a comprehensive MERN (MongoDB, Express.js, React.js, Node.js) application integrated with AI/ML capabilities to predict heart disease risk and provide personalized health recommendations.
 
-Available Scripts In the project directory, you can run:
+## Features
 
-npm start Runs the app in the development mode. Open http://localhost:3000 to view it in your browser.
+### 1. Heart Disease Prediction
+Utilizes machine learning algorithms to assess the risk of heart disease based on user-input health data.
 
-The page will reload when you make changes. You may also see any lint errors in the console.
+### 2. Dashboard
+A user-friendly interface to view health statistics, predictions, and recommendations at a glance.
+![image](https://github.com/user-attachments/assets/a1b539b0-4ade-4d5b-9c5b-e9a84d3c5c4f)
 
-npm test Launches the test runner in the interactive watch mode. See the section about running tests for more information.
 
-npm run build Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Additional Assessment Forms
+- **Health Assessment Forms**: Allows users to input their heart data to follow up with recommendations.
+- ![image](https://github.com/user-attachments/assets/842ef18e-df2b-4389-974e-734a7e583f50)
+- ![image](https://github.com/user-attachments/assets/d9acea32-81c4-4518-9bd4-938680059180)
+- ![image](https://github.com/user-attachments/assets/54c2249e-f909-46b8-8705-f77cbaa9a292)
 
-The build is minified and the filenames include the hashes. Your app is ready to be deployed!
 
-See the section about deployment for more information.
+- **Self-Assessment Form**: Allows users to input their health data for heart disease risk prediction.
+- ![image](https://github.com/user-attachments/assets/45a17d7b-aa31-481c-9813-15f0633893de)
+- ![image](https://github.com/user-attachments/assets/97d33068-8f2d-4f74-945c-96fc9250f896)
 
-npm run eject Note: this is a one-way operation. Once you eject, you can't go back!
+- **Medical Report Analysis**: Upload and analyze medical reports for insights and recommendations.
+- ![image](https://github.com/user-attachments/assets/1e0cb980-9c05-4799-933c-2c4e3dbdddfe)
 
-If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
+### 4. Find Nearby Cardiologists
+Locate and connect with cardiologists in your area for professional medical advice and treatment.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 5. AI-Powered Recommendations
+Leveraging Google's Gemini AI to provide:
+- Personalized diet plans
+- Tailored exercise routines
+- Lifestyle modification suggestions
 
-You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 6. Medical Chatbot
+An AI-driven chatbot powered by Google's Gemini to answer user queries related to heart health and general medical concerns.
+![image](https://github.com/user-attachments/assets/835811a5-1dc5-45b9-8679-03919f15da72)
 
-Learn More You can learn more in the Create React App documentation.
+## Technology Stack
 
-To learn React, check out the React documentation.
+- **Frontend**: React.js
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **AI/ML**: Custom machine learning models for heart disease prediction. (Logistic Regression and RandomForestClassifer)
+- **AI Integration**: Google's Gemini AI for personalized recommendations and chatbot functionality
 
-Code Splitting This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Setup Instructions
 
-Analyzing the Bundle Size This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+To set up the project locally, follow these steps:
 
-Making a Progressive Web App This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+1. **Clone the Repository**  
+   Clone the project using:
+   ```bash
+   git clone https://github.com/SrikarVeluvali/HeartHealth.git
+   ```
 
-Advanced Configuration This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+2. **Navigate to the Data Folder**  
+   Go to the `data` folder in the local repository:
+   ```bash
+   cd HeartHealth/data
+   ```
 
-Deployment This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+3. **Run the Jupyter Notebooks**  
+   Execute the two notebook files in the `data` folder. This will generate two joblib files.
 
-npm run build fails to minify This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+4. **Move Joblib Files**  
+   Paste the generated joblib files into the `app` folder.
+
+5. **Create Environment Variables**  
+   Create `.env` files in both the `client` and `server` folders. 
+
+6. **Add Environment Variables**  
+   Add the following variables in both `.env` files:
+   ```plaintext
+   GEMINI_API=your_gemini_api_key_here
+   MONGO_DB_URL=your_mongodb_url_here
+   ```
+
+7. **Update Flask App**  
+   In the Flask app, replace the `MONGO_DB_URL` and `GEMINI_API` with the values from your `.env` files.
+
+8. **Run the Application**  
+   Open three terminal windows:
+   - In the first terminal, run the Flask server:
+     ```bash
+     flask run
+     ```
+   - In the second terminal, run the Express server:
+     ```bash
+     npm run server
+     ```
+   - In the third terminal, run the React application:
+     ```bash
+     npm start
+     ```
+
+Now you're good to go! You can now access the Heart Health App.
