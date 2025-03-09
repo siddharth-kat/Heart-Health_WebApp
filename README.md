@@ -20,7 +20,7 @@ A user-friendly interface to view health statistics, predictions, and recommenda
 
 
 - **Self-Assessment Form**: Allows users to input their health data for heart disease risk prediction.
-- ![image](https://github.com/user-attachments/assets/45a17d7b-aa31-481c-9813-15f0633893de)
+-![Image](https://github.com/user-attachments/assets/deef8a4f-a078-440a-b74f-b7e54f8c4ea8)
 - ![image](https://github.com/user-attachments/assets/97d33068-8f2d-4f74-945c-96fc9250f896)
 
 - **Medical Report Analysis**: Upload and analyze medical reports for insights and recommendations.
