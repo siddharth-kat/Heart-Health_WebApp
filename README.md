@@ -54,7 +54,7 @@ To set up the project locally, follow these steps:
 1. **Clone the Repository**  
    Clone the project using:
    ```bash
-   git clone https://github.com/SrikarVeluvali/HeartHealth.git
+   git clone https://github.com/siddharth-kat/Heart-Health_WebApp.git
    ```
 
 2. **Navigate to the Data Folder**  
